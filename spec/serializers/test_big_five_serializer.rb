@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require_relative '../../serializers/big_five_results_text_serializer'
 
 describe BigFiveResultsTextSerializer do
-  let(:text) { fixture_file_upload('./fixtures/big_five_result.txt') }
+  let(:text) { File.open('big_five_result.txt').read }
   let(:serializer) { BigFiveResultsTextSerializer.new(text) }
   let(:result) {
     {
