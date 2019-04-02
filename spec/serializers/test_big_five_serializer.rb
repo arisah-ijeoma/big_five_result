@@ -67,7 +67,7 @@ describe BigFiveResultsTextSerializer do
 
   describe '#to_h' do
     it 'has correct details' do
-      expect(serializer.to_h).to eq(result)
+      expect(serializer.to_h).must_equal(result)
     end
   end
 end
