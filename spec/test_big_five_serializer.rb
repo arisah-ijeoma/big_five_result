@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../../serializers/big_five_results_text_serializer'
+require_relative '../big_five_results_text_serializer'
 
 describe BigFiveResultsTextSerializer do
   let(:text) { './spec/fixtures/big_five_result.txt' }
