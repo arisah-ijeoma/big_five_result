@@ -29,9 +29,9 @@ class BigFiveResultsPoster
 
     Success(response).bind do |value|
       if value.code == '201'
-        Success("Response Code - #{value.code}, Token - #{response.body}")
+        Success(response_code: value.code, token: response.body)
       else
-        Failure("Response Code - #{value.code}, Error Message - #{response.body}")
+        Failure(response_code: value.code, error_message: response.body)
       end
     end
   end
